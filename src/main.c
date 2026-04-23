@@ -61,28 +61,31 @@ void menu() {
 int main() {
     //menu da interface no Terminal
     int opcao;
-    menu();
-    printf("Escolha uma das opcoes: ");
-    scanf("%d", &opcao);
-    switch(opcao){
-        case 1:
-        calculo_media();
+    do {
+        menu();
+        printf("Escolha uma das opcoes: ");
+        scanf("%d", &opcao);
+        switch(opcao){
+            case 1:
+            calculo_media();
 
-        break;
-        case 2:
-        verificarSituacao();
+            break;
+            case 2:
+            verificarSituacao();
 
-        break;
-        case 3:
-        // Vazio até a criação da função de calcular derivada.
+            break;
+            case 3:
+            calcular_derivada();
 
-        break;
-        case 4:
-        printf("Programa encerrado.");
+            break;
+            case 4:
+            printf("Programa encerrado.");
 
-        break;
-        default: printf("Opcao Invalida.");
-    }
+            break;
+            default: printf("Opcao Invalida.");
+        }
+    } while (opcao != 4);
+    
     return 0;
 }
 
