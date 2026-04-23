@@ -14,6 +14,24 @@ void calculo_media() {
 
 }
 
+void verificarSituacao(){
+    float nota1, nota2, media;
+    printf("---Verificar se o aluno foi aprovado---\n");
+    printf("digite a nota 1: ");
+    scanf("%f", &nota1);
+    printf("Digite a nota 2: ");
+    scanf("%f", &nota2);
+
+
+    media = (nota1 + nota2)/2;
+    if (media >= 6){
+        printf("Voce foi aprovado!\n");
+    }
+    else{
+        printf("Voce foi reprovado!\n");
+    }
+}
+
 void menu() {
     printf("---MENU da equipe ARM---\n");
     printf("1-Calcular media\n");
@@ -23,7 +41,7 @@ void menu() {
 }
 
 int main() {
-//menu da interface no CMD
+//menu da interface no Terminal
 int opcao;
 menu();
 printf("Escolha uma das opcoes: ");
