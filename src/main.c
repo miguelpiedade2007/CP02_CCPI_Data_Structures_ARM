@@ -32,6 +32,24 @@ void verificarSituacao(){
     }
 }
 
+void calcular_derivada() {
+    float a, b, c, M, N;
+    printf("\n--- Calcular Derivada de f(x) = ax^2 + bx + c ---\n");
+    
+    printf("Digite o valor de a: ");
+    scanf("%f", &a);
+    printf("Digite o valor de b: ");
+    scanf("%f", &b);
+    printf("Digite o valor de c: ");
+    scanf("%f", &c);
+
+    M = 2 * a;
+    N = b;
+
+    // Exibe o resultado da derivada f'(x) = Mx + N
+    printf("A derivada e: f'(x) = %.2fx + %.2f\n", M, N);
+}
+
 void menu() {
     printf("---MENU da equipe ARM---\n");
     printf("1-Calcular media\n");
